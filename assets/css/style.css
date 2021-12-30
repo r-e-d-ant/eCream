@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: 'Pompiere';
+    src: url("/assets/ffamily/Pompiere/Pompiere-Regular.ttf");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========= VARIABLES ========== */
+:root {
+    --primary-clr: #6C467A;
+    --primar-clr-alt: #6C467A;
+    --second-clr: #026D85;
+    --second-clr-alt: #027C97;
+    --text-clr: #2D4253;
+    --text-clr-bg: #F5FDFF;
+    --bg-clr: #F5FDFF;
+    --gray-clr: #F5F8FA;
+}
+
+/* ======== White Theme ======== */
+.white-theme {
+    --primar-clr-alt: #D6C0E3;
+    --second-clr-alt: #027C97;
+    --text-clr: #F5FDFF;
+    --bg-clr: #2D4253;
+}
+
+/* ----------------------------- */
+
+body {
+    font-family: 'Pompiere', cursive;
+    font-size: 1.2rem;
+}
