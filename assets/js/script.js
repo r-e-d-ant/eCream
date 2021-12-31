@@ -1,3 +1,5 @@
+/* ----- BASE ------ */
+'use strict'
 
 // get required selectors to maniplute menu toggle
 const navbar = document.querySelector('.navbar');
@@ -21,3 +23,44 @@ menuTogglersContainer.addEventListener('click', () => {
 });
 
 /* ================================================ */
+
+/* -------- theme changing -------- */
+const themeTogglers = document.querySelector('.theme-togglers')
+const lightIcon = document.querySelector('.bxs-sun')
+const darkIcon = document.querySelector('.bxs-moon')
+
+var darkmode = localStorage.getItem('darkmode');
+
+// enable dark mode function
+const enableDarkMode = () => {
+    // add class dark mode to the body
+    document.body.classList.add('darkmode')
+    localStorage.setItem("darkmode", "enabled")
+}
+
+if(darkmode === "enabled") {
+    enableDarkMode()
+    lightIcon.style.display = "block"
+    darkIcon.style.display = "none"
+}
+
+// disable dark mode function
+const disableDarkMode = () => {
+    // remove class dark mode from the body
+    document.body.classList.remove('darkmode')
+    localStorage.setItem("darkmode", null)
+}
+
+// active/deactive dark mode
+themeTogglers.addEventListener('click', () => {
+    darkmode = localStorage.getItem('darkmode')
+    if(darkmode !== "enabled"){
+        enableDarkMode()
+        lightIcon.style.display = "block"
+        darkIcon.style.display = "none"
+    }else {
+        disableDarkMode()
+        lightIcon.style.display = "none"
+        darkIcon.style.display = "block"
+    }
+})

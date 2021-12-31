@@ -26,7 +26,7 @@
 }
 
 /* ======== White Theme ======== */
-.white-theme {
+.darkmode {
     --primar-clr-alt: #D6C0E3;
     --second-clr-alt: #027C97;
     --text-clr: #F5FDFF;
@@ -38,6 +38,15 @@
 ul {
     list-style: none;
 }
+/* -- transitions -- */
+.clr-transition {
+    transition: color 1s;
+}
+.bg-clr__transition {
+    transition: background-color 1s;
+}
+/* ================= */
+
 .container {
     padding: 1.8rem 3rem;
 }
@@ -54,6 +63,7 @@ body {
     font-size: 1.2rem;
     color: var(--text-clr);
     background-color: var(--bg-clr);
+    transition: background-color 1s;
 }
 header {
     display: flex;
@@ -85,7 +95,7 @@ header {
     position: absolute;
     width: 100%;
     height: .1rem;
-    background-color: var(--primary-clr);
+    background-color: var(--primar-clr-alt);
     bottom: 0;
     transform: scaleX(0);
     transition: 150ms transform;
@@ -93,18 +103,10 @@ header {
 .nav-link:hover::before {
     transform: scaleX(1);
 }
-.theme-togglers-phone {
-    display: none;
-}
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 3rem;
     }
-    .theme-togglers-phone {
-        display: block;
-        margin-top: 1.5rem;
-    }
-    .theme-togglers-phone
     .theme-toggler {
         color: var(--text-clr-bg);
     }
@@ -142,35 +144,42 @@ header {
     display: flex;
 }
 .social-links ul li {
-    margin-right: .5rem;
+    margin-right: 1.5rem;
 }
 .social-links ul li:last-child {
     margin-right: 0;
 }
 .nav-icon {
-    color: var(--second-clr);
+    cursor: pointer;
+    color: var(--nav-txt-clr);
     font-size: 1.4rem;
 }
 .line-divider {
     height: .05rem;
     width: 1rem;
-    background-color: var(--second-clr);
+    background-color: var(--nav-txt-clr);
     margin: 0 .5rem;
     border-radius: 10rem;
 }
 .theme-togglers {
+    cursor: pointer;
     display: flex;
     align-items: center;
 }
 .theme-toggler {
-    color: var(--second-clr);
+    color: var(--nav-txt-clr);
     font-size: 1.5rem;
+    transition: transform 300ms;
+}
+.theme-toggler:hover {
+    transform: rotate(60deg);
 }
 .menu-togglers {
+    cursor: pointer;
     display: none;
 }
 .menu-toggle {
-    color: var(--second-clr);
+    color: var(--nav-txt-clr);
     font-size: 3rem;
 }
 .bx-menu,
