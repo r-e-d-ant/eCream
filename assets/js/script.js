@@ -38,7 +38,7 @@ const enableDarkMode = () => {
     localStorage.setItem("darkmode", "enabled")
 }
 
-if(darkmode === "enabled") {
+if(darkmode && darkmode === "enabled") {
     enableDarkMode()
     lightIcon.style.display = "block"
     darkIcon.style.display = "none"
@@ -54,7 +54,7 @@ const disableDarkMode = () => {
 // active/deactive dark mode
 themeTogglers.addEventListener('click', () => {
     darkmode = localStorage.getItem('darkmode')
-    if(darkmode !== "enabled"){
+    if(darkmode && darkmode !== "enabled"){
         enableDarkMode()
         lightIcon.style.display = "block"
         darkIcon.style.display = "none"
@@ -64,3 +64,35 @@ themeTogglers.addEventListener('click', () => {
         darkIcon.style.display = "block"
     }
 })
+
+// auto type on hero page
+// hook title
+let typedT = new Typed(".auto-input-t", {
+    strings: ["Real ice cream for real ice cream lovers"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: false,
+    cursorChar: ''
+})
+
+// hook subtitle
+let typed = new Typed(".auto-input", {
+    strings: ["Sweet ice cream for pleasure seekers."],
+    typeSpeed: 100,
+    backSpeed: 100,
+    startDelay: 6000,
+    loop: false,
+    cursorChar: ''
+})
+
+/* -- hide show hero buttons -- */
+// delay before showing them
+const heroButtonsContainer = document.querySelector('.hero-btns-container');
+
+var delayTime = 11000
+
+heroButtonsContainer.style.transition = "opacity 1000ms"
+
+setTimeout(() => {
+    heroButtonsContainer.style.opacity = 1
+}, delayTime)

@@ -15,7 +15,7 @@
 /* ========= VARIABLES ========== */
 :root {
     --primary-clr: #6C467A;
-    --primar-clr-alt: #6C467A;
+    --primary-clr-alt: #6C467A;
     --second-clr: #026D85;
     --nav-txt-clr: var(--second-clr);
     --second-clr-alt: #027C97;
@@ -27,7 +27,7 @@
 
 /* ======== White Theme ======== */
 .darkmode {
-    --primar-clr-alt: #D6C0E3;
+    --primary-clr-alt: #D6C0E3;
     --second-clr-alt: #027C97;
     --text-clr: #F5FDFF;
     --nav-txt-clr: var(--text-clr);
@@ -38,12 +38,32 @@
 ul {
     list-style: none;
 }
+img {
+    height: auto;
+    width: 100%;
+}
 /* -- transitions -- */
 .clr-transition {
-    transition: color 1s;
+    transition: color 1000ms;
 }
 .bg-clr__transition {
     transition: background-color 1s;
+}
+/* ================= */
+/* -- buttons -- */
+.button {
+    cursor: pointer;
+    font-size: 1rem;
+    height: 3rem;
+    padding: 0 1rem;
+    border: none;
+    color: var(--text-clr-bg);
+}
+.btn-primary {
+    background-color: var(--primary-clr);
+}
+.btn-second-alt {
+    background-color: var(--second-clr-alt);
 }
 /* ================= */
 
@@ -56,15 +76,17 @@ ul {
     }
 }
 
-/* ----------------------------- */
-
 body {
     font-family: 'Pompiere', cursive;
     font-size: 1.2rem;
     color: var(--text-clr);
     background-color: var(--bg-clr);
-    transition: background-color 1s;
+    transition: background-color 1000ms;
 }
+
+/* ----------------------------- */
+
+/* -------- HEADER -------- */
 header {
     display: flex;
     align-items: center;
@@ -95,7 +117,7 @@ header {
     position: absolute;
     width: 100%;
     height: .1rem;
-    background-color: var(--primar-clr-alt);
+    background-color: var(--primary-clr-alt);
     bottom: 0;
     transform: scaleX(0);
     transition: 150ms transform;
@@ -174,6 +196,9 @@ header {
 .theme-toggler:hover {
     transform: rotate(60deg);
 }
+.bxs-sun {
+    display: none;
+}
 .menu-togglers {
     cursor: pointer;
     display: none;
@@ -201,5 +226,100 @@ header {
     }
     .menu-togglers {
         display: block;
+    }
+}
+
+/* -------- SECTION ONE: Hero section -------- */
+/* .section-one {
+} */
+.hook-container {
+    margin-top: 2rem;
+}
+.hook-title {
+    font-size: 4rem;
+    line-height: 117%;
+    max-width: 50rem;
+    color: var(--text-clr);
+    transition: font-size 1000ms;
+}
+.hook-sub_title {
+    font-size: 30px;
+    line-height: 157.5%;
+    color: var(--text-clr);
+}
+@media screen and (min-width: 414px) {
+    .hook-title {
+        font-size: 92px;
+    }
+}
+.hero-btns-container {
+    margin-top: 2rem;
+    opacity: 0;
+}
+.in-btn-icon {
+    font-size: 1rem;
+}
+.btn-hero {
+    border-radius: 50px;
+    font-size: .8rem;
+    transition: box-shadow 300ms;
+    margin-right: .1rem;
+}
+@media screen and (min-width: 358px) {
+    .btn-hero {
+        margin-right: 2rem;
+        font-size: .9rem;
+    }
+}
+.btn-hero:last-child {
+    margin-right: 0;
+}
+.btn-hero:hover {
+    box-shadow: 5px 5px var(--text-clr);
+}
+.hero-lady-img {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    transition: width 1000ms;
+}
+@media screen and (min-width: 546px) {
+    .hero-lady-img {
+        display: block;
+        width: 250px;
+    }
+}
+@media screen and (min-width: 654px) {
+    .hero-lady-img {
+        width: 320px;
+    }
+}
+@media screen and (min-width: 980px) {
+    .hero-lady-img {
+        width: 400px;
+    }
+}
+.hand-hole-cake-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    transition: width 1000ms;
+}
+@media screen and (max-width: 414px) {
+    .hand-hole-cake-img {
+        display: none;
+    }
+}
+@media screen and (max-height: 656px) {
+    .hand-hole-cake-img {
+        display: none;
+    }
+}
+@media screen and (min-width: 546px) {
+    .hand-hole-cake-img {
+        width: 120px;
     }
 }
