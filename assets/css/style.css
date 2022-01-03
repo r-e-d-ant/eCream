@@ -342,6 +342,7 @@ header {
 /* -------- SECTION TWO: Product section -------- */
 .section-two {
     height: 100vh;
+    position: relative;
 }
 .s-two-upper-info {
     display: flex;
