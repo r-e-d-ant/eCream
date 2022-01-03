@@ -15,7 +15,7 @@
 /* ========= VARIABLES ========== */
 :root {
     --primary-clr: #6C467A;
-    --primary-clr-alt: #6C467A;
+    --primary-clr-alt: #D6C0E3;
     --second-clr: #026D85;
     --second-clr-alt: #027C97;
     --text-clr: #F5FDFF;
@@ -23,15 +23,19 @@
     --text-clr-bg: #F5FDFF;
     --bg-clr: #2D4253;
     --gray-clr: #F5F8FA;
+    --product-bg-clr: #364F63;
+    --bx-shadow-clr: #6d477b33;
 }
 
 /* ======== White Theme ======== */
 .lightmode {
-    --primary-clr-alt: #D6C0E3;
+    --primary-clr-alt: #6C467A;
     --second-clr-alt: #027C97;
     --text-clr: #2D4253;
     --nav-txt-clr: var(--second-clr);
     --bg-clr: #F5FDFF;
+    --product-bg-clr: #F5FDFF;
+    --bx-shadow-clr: #2d425333;
 }
 
 /* ------------ BASE ------------ */
@@ -41,6 +45,9 @@ ul {
 img {
     height: auto;
     width: 100%;
+}
+.pos-abs-center {
+    position: absolute;
 }
 /* -- transitions -- */
 .clr-transition {
@@ -63,7 +70,8 @@ img {
     background-color: var(--primary-clr);
 }
 .btn-second-alt {
-    background-color: var(--second-clr-alt);
+    background-color: transparent;
+    border: thin solid var(--text-clr);
 }
 /* ================= */
 
@@ -230,8 +238,10 @@ header {
 }
 
 /* -------- SECTION ONE: Hero section -------- */
-/* .section-one {
-} */
+.section-one {
+    height: 81.5vh;
+    box-shadow: 0 -5px 5px 0 var(--bx-shadow-clr) inset;
+}
 .hook-container {
     margin-top: 2rem;
 }
@@ -330,3 +340,91 @@ header {
 }
 
 /* -------- SECTION TWO: Product section -------- */
+.section-two {
+    height: 100vh;
+}
+.s-two-upper-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.s-two-slogan {
+    font-size: 1.5rem;
+    max-width: 15rem;
+    letter-spacing: .05rem;
+    line-height: 2rem;
+}
+.s-two-definition {
+    font-size: 1.5rem;
+    max-width: 32rem;
+    letter-spacing: .05rem;
+    line-height: 2rem;
+}
+
+
+.s-two-products {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.product {
+    cursor: pointer;
+    /* From https://css.glass */
+    background: rgba(54, 79, 99, 0.04);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+    width: calc(365 * 0.06rem);
+    height: calc(421 * 0.06rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 1000ms;
+}
+.product:hover {
+    transform: rotateY(360deg);
+}
+.product img {
+    max-width: 55%;
+}
+.product-one img {
+    transform: rotate(30deg);
+}
+.product-two img {
+    max-width: 80%;
+}
+.product-three img {
+    max-width: 100%;
+}
+.product .price {
+    top: 0;
+    left: 0;
+    margin: 1rem;
+}
+
+.product .buy-btn {
+    cursor: pointer;
+    bottom: 0;
+    left: -.1rem;
+    margin: 0 0 .5rem 0;
+    padding: .5rem 2.5rem .5rem 1rem;
+    color: var(--text-clr-bg);
+    background-color: var(--primary-clr);
+    clip-path: polygon(100% 0, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+}
+.product .buy-btn:hover {
+    text-decoration: underline;
+}
+.product .name {
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    color: var(--text-clr);
+}
+.product .name b {
+    color: var(--primary-clr-alt);
+}
