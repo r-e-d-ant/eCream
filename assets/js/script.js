@@ -25,9 +25,9 @@ menuTogglersContainer.addEventListener('click', () => {
 /* ================================================ */
 
 /* -------- theme changing -------- */
-const themeTogglers = document.querySelector('.theme-togglers')
-const lightIcon = document.querySelector('.bxs-sun')
-const darkIcon = document.querySelector('.bxs-moon')
+const themeTogglers = document.querySelector('.theme-togglers');
+const lightIcon = document.querySelector('.bxs-sun');
+const darkIcon = document.querySelector('.bxs-moon');
 
 var lightmode = localStorage.getItem('lightmode');
 
@@ -39,11 +39,11 @@ const enableLightMode = () => {
      // change theme toggle styles
     lightIcon.style.display = "none"
     darkIcon.style.display = "block"
-}
+};
 
 if(lightmode && lightmode === "enabled") {
     enableLightMode()
-}
+};
 
 // disable dark mode function
 const disableLightMode = () => {
@@ -53,7 +53,7 @@ const disableLightMode = () => {
     // change theme toggle styles
     lightIcon.style.display = "block"
     darkIcon.style.display = "none"
-}
+};
 
 // active/deactive dark mode
 themeTogglers.addEventListener('click', () => {
@@ -63,7 +63,7 @@ themeTogglers.addEventListener('click', () => {
     }else {
         disableLightMode()
     }
-})
+});
 
 // auto type on hero page
 // hook title
@@ -73,7 +73,7 @@ let typedT = new Typed(".auto-input-t", {
     backSpeed: 100,
     loop: false,
     cursorChar: ''
-})
+});
 
 // hook subtitle
 let typed = new Typed(".auto-input", {
@@ -83,16 +83,16 @@ let typed = new Typed(".auto-input", {
     startDelay: 6000,
     loop: false,
     cursorChar: ''
-})
+});
 
 /* -- hide show hero buttons -- */
 // delay before showing them
 const heroButtonsContainer = document.querySelector('.hero-btns-container');
 
-var delayTime = 11000
+var delayTime = 11000;
 
-heroButtonsContainer.style.transition = "opacity 1000ms"
+heroButtonsContainer.style.transition = "opacity 1000ms";
 
 setTimeout(() => {
     heroButtonsContainer.style.opacity = 1
-}, delayTime)
+}, delayTime);
