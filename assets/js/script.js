@@ -29,39 +29,39 @@ const themeTogglers = document.querySelector('.theme-togglers')
 const lightIcon = document.querySelector('.bxs-sun')
 const darkIcon = document.querySelector('.bxs-moon')
 
-var darkmode = localStorage.getItem('darkmode');
+var lightmode = localStorage.getItem('lightmode');
 
 // enable dark mode function
-const enableDarkMode = () => {
+const enableLightMode = () => {
     // add class dark mode to the body
-    document.body.classList.add('darkmode')
-    localStorage.setItem("darkmode", "enabled")
+    document.body.classList.add('lightmode')
+    localStorage.setItem("lightmode", "enabled")
+     // change theme toggle styles
+    lightIcon.style.display = "none"
+    darkIcon.style.display = "block"
 }
 
-if(darkmode && darkmode === "enabled") {
-    enableDarkMode()
+if(lightmode && lightmode === "enabled") {
+    enableLightMode()
+}
+
+// disable dark mode function
+const disableLightMode = () => {
+    // remove class dark mode from the body
+    document.body.classList.remove('lightmode')
+    localStorage.setItem("lightmode", null)
+    // change theme toggle styles
     lightIcon.style.display = "block"
     darkIcon.style.display = "none"
 }
 
-// disable dark mode function
-const disableDarkMode = () => {
-    // remove class dark mode from the body
-    document.body.classList.remove('darkmode')
-    localStorage.setItem("darkmode", null)
-}
-
 // active/deactive dark mode
 themeTogglers.addEventListener('click', () => {
-    darkmode = localStorage.getItem('darkmode')
-    if(darkmode && darkmode !== "enabled"){
-        enableDarkMode()
-        lightIcon.style.display = "block"
-        darkIcon.style.display = "none"
+    lightmode = localStorage.getItem('lightmode')
+    if(!lightmode || lightmode !== "enabled"){
+        enableLightMode()
     }else {
-        disableDarkMode()
-        lightIcon.style.display = "none"
-        darkIcon.style.display = "block"
+        disableLightMode()
     }
 })
 

@@ -17,21 +17,21 @@
     --primary-clr: #6C467A;
     --primary-clr-alt: #6C467A;
     --second-clr: #026D85;
-    --nav-txt-clr: var(--second-clr);
     --second-clr-alt: #027C97;
-    --text-clr: #2D4253;
+    --text-clr: #F5FDFF;
+    --nav-txt-clr: var(--text-clr);
     --text-clr-bg: #F5FDFF;
-    --bg-clr: #F5FDFF;
+    --bg-clr: #2D4253;
     --gray-clr: #F5F8FA;
 }
 
 /* ======== White Theme ======== */
-.darkmode {
+.lightmode {
     --primary-clr-alt: #D6C0E3;
     --second-clr-alt: #027C97;
-    --text-clr: #F5FDFF;
-    --nav-txt-clr: var(--text-clr);
-    --bg-clr: #2D4253;
+    --text-clr: #2D4253;
+    --nav-txt-clr: var(--second-clr);
+    --bg-clr: #F5FDFF;
 }
 
 /* ------------ BASE ------------ */
@@ -196,7 +196,7 @@ header {
 .theme-toggler:hover {
     transform: rotate(60deg);
 }
-.bxs-sun {
+.bxs-moon {
     display: none;
 }
 .menu-togglers {
@@ -234,6 +234,11 @@ header {
 } */
 .hook-container {
     margin-top: 2rem;
+}
+@media screen and (max-width: 348px) {
+    .hook-container {
+        margin-top: 0rem;
+    }
 }
 .hook-title {
     font-size: 4rem;
@@ -323,3 +328,5 @@ header {
         width: 120px;
     }
 }
+
+/* -------- SECTION TWO: Product section -------- */
