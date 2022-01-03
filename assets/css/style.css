@@ -72,6 +72,7 @@ img {
 .btn-second-alt {
     background-color: transparent;
     border: thin solid var(--text-clr);
+    color: var(--text-clr);
 }
 /* ================= */
 
