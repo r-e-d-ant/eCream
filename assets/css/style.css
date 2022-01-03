@@ -347,14 +347,10 @@ header {
 }
 
 /* -------- SECTION TWO: Product section -------- */
-.section-two {
-    /* height: 100vh; */
-}
 .s-two-upper-info {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
 }
 .s-two-slogan {
     font-size: 1.5rem;
@@ -362,12 +358,19 @@ header {
     letter-spacing: .05rem;
     line-height: 2rem;
 }
+@media screen and (max-width: 846px) {
+    .section-two {
+        margin-top: 5rem;
+    }
+    .s-two-slogan {
+        margin-bottom: 2rem;
+    }
+}
 .s-two-products {
     margin-top: 5rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
 }
 .product {
     cursor: pointer;
@@ -383,6 +386,11 @@ header {
     justify-content: center;
     position: relative;
     transition: transform 1000ms;
+}
+@media screen  and (max-width: 1147px) {
+    .product {
+        margin-bottom: 2rem;
+    }
 }
 @media screen  and (min-width: 700px) {
     .product {
