@@ -438,16 +438,26 @@ header {
 
 /* ----- section three: Ad products section ----- */
 .section-three {
-    margin: 6rem 0;
+    margin: 5rem 0;
+    margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
     column-gap: 2rem;
     row-gap: 1.2rem;
 }
+@media screen  and (min-width: 843px) {
+    .section-three {
+        margin-top: 6rem;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        row-gap: 1.2rem;
+    }
+}
 @media screen and (min-width: 1023px) {
     .section-three {
         align-items: flex-start;
-        justify-content: center;
     }
 }
 
@@ -465,20 +475,74 @@ header {
     flex-direction: column;
     row-gap: 1.5rem;
 }
-.ad-buy-btn {
-    background-color: var(--primary-clr);
-    color: var(--text-clr-bg);
-}
 .s-three-title {
     font-size: 2.5rem;
-    max-width: 19rem;
+    max-width: 20rem;
     color: var(--primary-clr-alt);
+}
+.s-three-price {
+    font-size: 1.4rem;
 }
 .ad-buy-btn {
     max-width: calc(147 * 0.06rem);
-    margin-top: 1rem;
+    margin-top: .8rem;
+    background-color: var(--primary-clr);
+    color: var(--text-clr-bg);
     transition: box-shadow 300ms;
 }
 .ad-buy-btn:hover {
     box-shadow: 5px 5px var(--text-clr);
+}
+
+/* ----- section four ----- */
+.section-four {
+    margin-bottom: 3rem;
+    background: url("../images/emp_vect.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: top;
+}
+.s-four-title {
+    max-width: 30rem;
+    margin-bottom: 1rem;
+}
+.employer-info {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.employer .name {
+    color: var(--primary-clr-alt);
+    font-size: 1.3rem;
+}
+.employer .title {
+    font-size: 1.1rem;
+    margin-top: .5rem;
+}
+.rate img {
+    width: 100px;
+}
+.waiter-img-container img {
+    width: 100%;
+}
+@media screen  and (min-width: 392px) {
+    .waiter-img-container img {
+        width: 370px;
+    }
+}
+.section-four {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+@media screen  and (min-width: 843px) {
+    .section-four {
+        flex-wrap: nowrap;
+    }
 }
