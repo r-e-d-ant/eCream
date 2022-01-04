@@ -513,7 +513,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
     background: url("../images/emp_vect.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -575,7 +575,10 @@ header {
 }
 
 /* ----- section five: promo section ----- */
-
+.section-five {
+    z-index: -1;
+    background: rgba(108, 70, 122, 0.1);
+}
 .promo-card {
     display: flex;
     position: relative;
@@ -593,6 +596,7 @@ header {
 }
 @media screen and (min-width: 678px) {
     .promo-card img {
+        z-index: 0;
         width: 250px;
     }
 }
