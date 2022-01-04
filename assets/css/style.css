@@ -367,10 +367,15 @@ header {
     }
 }
 .s-two-products {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+@media screen  and (min-width: 700px) {
+    .s-two-products {
+        margin-top: 4rem;
+    }
 }
 .product {
     cursor: pointer;
@@ -446,18 +451,20 @@ header {
 
 /* ----- section three: Ad products section ----- */
 .section-three {
-    margin: 5rem 0;
     margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
 }
 @media screen  and (min-width: 843px) {
     .section-three {
-        margin-top: 6rem;
         margin-bottom: 0;
     }
 }
 @media screen and (min-width: 1023px) {
+    .section-three {
+        margin-top: 5rem;
+        margin-bottom: 0;
+    }
     .section-three {
         align-items: flex-start;
     }
@@ -583,7 +590,6 @@ header {
     display: flex;
     position: relative;
     padding: 1rem 1rem 13rem 1rem;
-    margin: 5rem 0;
     background: linear-gradient(153.18deg, rgba(108, 70, 122, 0.5) 54.24%, rgba(108, 70, 122, 0) 100%);
 }
 .promo-card img {
