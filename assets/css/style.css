@@ -507,7 +507,7 @@ header {
     box-shadow: 5px 5px var(--text-clr);
 }
 
-/* ----- section four ----- */
+/* ----- section four: oath section ----- */
 .section-four {
     display: flex;
     flex-wrap: wrap;
@@ -572,4 +572,47 @@ header {
     .waiter-img-container img {
         width: 370px;
     }
+}
+
+/* ----- section five: promo section ----- */
+
+.promo-card {
+    display: flex;
+    position: relative;
+    padding: 1rem 1rem 13rem 1rem;
+    margin: 5rem 0;
+    background: linear-gradient(153.18deg, rgba(108, 70, 122, 0.5) 54.24%, rgba(108, 70, 122, 0) 100%);
+}
+.promo-card img {
+    z-index: -1;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: width 1000ms;
+}
+@media screen and (min-width: 678px) {
+    .promo-card img {
+        width: 250px;
+    }
+}
+@media screen and (min-width: 912px) {
+    .promo-card {
+        padding: 2rem;
+        background: linear-gradient(90deg, rgba(108, 70, 122, 0.5) 54.24%, rgba(108, 70, 122, 0) 100%);
+    }
+    .promo-card img {
+        width: 280px;
+    }
+}
+.promo-title {
+    font-size: 2rem;
+    max-width: 20rem;
+}
+.promo-description {
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
+}
+.promo-btn {
+    width: 30%;
 }
