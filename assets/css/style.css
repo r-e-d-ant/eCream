@@ -450,17 +450,11 @@ header {
     margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 2rem;
-    row-gap: 1.2rem;
 }
 @media screen  and (min-width: 843px) {
     .section-three {
         margin-top: 6rem;
         margin-bottom: 0;
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 2rem;
-        row-gap: 1.2rem;
     }
 }
 @media screen and (min-width: 1023px) {
@@ -471,7 +465,14 @@ header {
 
 .s-three-upper-img-container img {
     width: 100%;
+    margin-bottom: 1.3rem;
     transition: width 1000ms;
+}
+@media screen and (min-width: 992px) {
+    .s-three-upper-img-container img {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
 }
 @media screen  and (min-width: 515px) {
     .s-three-upper-img-container img {
@@ -481,15 +482,19 @@ header {
 .s-three-lower-container {
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem;
 }
 .s-three-title {
     font-size: 2.5rem;
     max-width: 20rem;
+    margin-bottom: 1.5rem;
     color: var(--primary-clr-alt);
+}
+.s-three-desc {
+    margin-bottom: 1.5rem;
 }
 .s-three-price {
     font-size: 1.4rem;
+    margin-bottom: 1.5rem;
 }
 .ad-buy-btn {
     max-width: calc(147 * 0.06rem);
@@ -504,6 +509,10 @@ header {
 
 /* ----- section four ----- */
 .section-four {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 3rem;
     background: url("../images/emp_vect.svg");
     background-repeat: no-repeat;
@@ -511,6 +520,12 @@ header {
     background-attachment: scroll;
     background-position: top;
 }
+@media screen  and (min-width: 843px) {
+    .section-four {
+        flex-wrap: nowrap;
+    }
+}
+
 .s-four-title {
     max-width: 30rem;
     margin-bottom: 1rem;
@@ -519,9 +534,16 @@ header {
     margin-top: 2.5rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     align-items: center;
     justify-content: space-between;
+}
+.employer {
+    margin-bottom: 1rem;
+}
+@media screen  and (min-width: 252px) {
+    .employer {
+        margin-bottom: 0;
+    }
 }
 .employer .name {
     color: var(--primary-clr-alt);
@@ -534,23 +556,20 @@ header {
 .rate img {
     width: 100px;
 }
+.waiter-img-container {
+    margin-top: 2rem;
+}
+@media screen  and (min-width: 392px) {
+    .waiter-img-container {
+        margin-top: 0;
+        margin-left: 2rem;
+    }
+}
 .waiter-img-container img {
     width: 100%;
 }
 @media screen  and (min-width: 392px) {
     .waiter-img-container img {
         width: 370px;
-    }
-}
-.section-four {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-@media screen  and (min-width: 843px) {
-    .section-four {
-        flex-wrap: nowrap;
     }
 }
