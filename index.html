@@ -48,10 +48,10 @@
     <main class="main">
         <section class="section section-one">
             <div class="container hook-container">
-                <!-- <h1 class="hook-title"><span class="auto-input-t clr-transition">Real ice cream for real ice cream lovers</span></h1>
-                <h2 class="hook-sub_title"><span class="auto-input clr-transition">Sweet ice cream for pleasure seekers.</span></h2> -->
-                <h1 class="hook-title"><span class="auto-input-t clr-transition"></span></h1>
-                <h2 class="hook-sub_title"><span class="auto-input clr-transition"></span></h2>
+                <h1 class="hook-title"><span class="auto-input-t clr-transition">Real ice cream for real ice cream lovers</span></h1>
+                <h2 class="hook-sub_title"><span class="auto-input clr-transition">Sweet ice cream for pleasure seekers.</span></h2>
+                <!-- <h1 class="hook-title"><span class="auto-input-t clr-transition"></span></h1>
+                <h2 class="hook-sub_title"><span class="auto-input clr-transition"></span></h2> -->
                 <div class="hero-btns-container">
                     <button class="button btn-hero btn-primary buy-hero-btn"><i class="bx bx-cart in-btn-icon"></i> BUY ONLINE</button>
                     <button class="button btn-hero btn-second-alt"><i class="bx bx-map in-btn-icon"></i> FIND IN STORE</button>
@@ -137,7 +137,45 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="footer container">
+        <h2 class="footer-title">Contact</h2>
+        <form class="contact-form">
+            <div class="name-email-inputs-container">
+                <div class="form-control">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="normal-input all-input">
+                </div>
+                <div class="form-control">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" id="email" class="normal-input all-input">
+                </div>
+            </div>
+
+            <!-- text area -->
+            <div class="form-control">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" cols="30" rows="10" class="textarea-input all-input"></textarea>
+            </div>
+            <button type="submit" class="send-msg-btn button ad-buy-btn">SEND</button>
+        </form>
+
+        <div class="other-footer-infos-container">
+            <span class="footer-info"><i class="bx bx-map"></i> Address, floor 23, Jupiter</span>
+            <span class="footer-info"><i class="bx bx-phone"></i> 22 (923) 3424 4156</span>
+            <span class="footer-info"><i class="bx bx-mail-send"></i> eCream@domain.com</span>
+            <div class="footer-social-links">
+                <ul>
+                    <li><i class='bx bxl-instagram-alt nav-icon clr-transition'></i></li>
+                    <li><i class='bx bxl-twitter nav-icon clr-transition'></i></li>
+                    <li><i class='bx bxl-facebook-square nav-icon clr-transition'></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lower-footer">
+            <span class="developer">Developed by <a href="#" class="developerportfoliolink" title="developer portfolio link">Thierry M.</a></span>
+            <span class="policy"><a href="#" class="policy-link">Privacy • Policy</a></span>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="./assets/js/script.js"></script>
 </body>
