@@ -638,6 +638,7 @@ header {
     margin-bottom: 3rem;
 }
 .footer-title {
+    color: var(--text-clr);
     font-size: 3rem;
     margin-bottom: 2rem;
 }
@@ -646,6 +647,7 @@ header {
     flex-direction: column;
 }
 .form-label {
+    color: var(--text-clr);
     font-size: 1.9rem;
     margin-bottom: .5rem;
 }
@@ -724,6 +726,7 @@ header {
     margin: 1rem 0;
 }
 .footer-info {
+    color: var(--text-clr);
     display: flex;
     align-items: center;
     font-size: 1.3rem;
@@ -733,6 +736,7 @@ header {
 .footer-info i {
     margin-right: .5rem;
     font-size: 1.4rem;
+    color: var(--text-clr);
 }
 .footer-social-links {
     margin-top: 2rem;
@@ -746,6 +750,7 @@ header {
     display: flex;
 }
 .footer-social-links ul .bx {
+    color: var(--text-clr);
     margin-right: 1rem;
     font-size: 1.7rem;
     opacity: .8;
@@ -804,6 +809,7 @@ header {
 .copy,
 .developer,
 .policy {
+    color: var(--text-clr);
     font-size: 1.2rem;
 }
 .developer a,
