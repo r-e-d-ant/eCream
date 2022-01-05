@@ -22,6 +22,7 @@
     --nav-txt-clr: var(--text-clr);
     --text-clr-bg: #F5FDFF;
     --bg-clr: #2D4253;
+    --mobile-menu-bg-clr: #3e586d;
     --form-bg-clr: #dcf1ff70;
     --form-focus-bg-clr: #bf93cf73;
     --gray-clr: #F5F8FA;
@@ -108,6 +109,8 @@ img {
 /* -------- HEADER -------- */
 header {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -115,9 +118,11 @@ header {
     color: var(--nav-txt-clr);
     font-size: 2.3rem;
     text-decoration: none;
+    margin-right: 2rem;
 }
 .nav-items {
     display: flex;
+    margin-right: 5rem;
 }
 .nav-item {
     margin-right: 3rem;
@@ -144,6 +149,14 @@ header {
 .nav-link:hover::before {
     transform: scaleX(1);
 }
+.phone-social-links {
+    display: none;
+}
+.navbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 3rem;
@@ -162,7 +175,7 @@ header {
         font-size: 2rem;
     }
     .navbar {
-        background-color: var(--second-clr);
+        background-color: var(--mobile-menu-bg-clr);
         position: absolute;
         padding: .5rem 5rem 1rem 1rem;
         border-radius: .5rem 0 0 .5rem;
@@ -195,6 +208,11 @@ header {
     color: var(--nav-txt-clr);
     font-size: 1.4rem;
 }
+@media screen and (max-width: 768px) {
+    .nav-icon {
+        color: var(--text-clr-bg);
+    }
+}
 .line-divider {
     height: .05rem;
     width: 1rem;
@@ -211,6 +229,11 @@ header {
     color: var(--nav-txt-clr);
     font-size: 1.5rem;
     transition: transform 300ms;
+}
+@media screen and (max-width: 768px) {
+    .theme-toggler {
+        color: var(--text-clr-bg);
+    }
 }
 .theme-toggler:hover {
     transform: rotate(60deg);
@@ -240,9 +263,6 @@ header {
     display: none;
 }
 @media screen and (max-width: 768px) {
-    .social-links {
-        display: none;
-    }
     .menu-togglers {
         display: block;
     }
