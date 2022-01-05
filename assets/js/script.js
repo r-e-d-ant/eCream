@@ -97,3 +97,10 @@ heroButtonsContainer.style.transition = "opacity 1000ms";
 setTimeout(() => {
     heroButtonsContainer.style.opacity = 1
 }, delayTime);
+
+
+// --- prevent form submission on contact section ---
+const sendMsgButton = document.querySelector('.send-msg-btn')
+sendMsgButton.addEventListener('click', (e) => {
+    e.preventDefault()
+})

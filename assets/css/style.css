@@ -4,6 +4,10 @@
     src: url("/assets/ffamily/Pompiere/Pompiere-Regular.ttf");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
