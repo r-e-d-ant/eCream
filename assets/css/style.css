@@ -27,6 +27,7 @@ html {
     --text-clr-bg: #F5FDFF;
     --bg-clr: #2D4253;
     --mobile-menu-bg-clr: #3e586d;
+    --sec-two-bg-clr: var(--mobile-menu-bg-clr);
     --form-bg-clr: #dcf1ff70;
     --form-focus-bg-clr: #bf93cf73;
     --gray-clr: #F5F8FA;
@@ -40,6 +41,7 @@ html {
     --second-clr-alt: #027C97;
     --form-bg-clr: #a67eb43a;
     --form-focus-bg-clr: #107a9231;
+    --sec-two-bg-clr: #F5FDFF;
     --text-clr: #2D4253;
     --nav-txt-clr: var(--second-clr);
     --bg-clr: #F5FDFF;
@@ -105,6 +107,11 @@ img {
 @media screen and (max-width: 768px) {
     .container {
         padding: 1rem;
+    }
+}
+@media screen and (min-width: 3000px) {
+    .container {
+        padding: 1.8rem 500px;
     }
 }
 
@@ -279,7 +286,21 @@ header {
 /* -------- SECTION ONE: Hero section -------- */
 .section-one {
     height: 81.5vh;
-    box-shadow: 0 -5px 5px 0 var(--bx-shadow-clr) inset;
+}
+@media screen and (max-width: 846px) {
+    .section-one {
+        height: 74vh;
+    }
+}
+@media screen and (max-width: 845px) {
+    .section-one {
+        height: 68vh;
+    }
+}
+@media screen and (max-width: 546px) {
+    .section-one {
+        height: 74vh;
+    }
 }
 .hook-container {
     margin-top: 2rem;
@@ -356,11 +377,17 @@ header {
     }
 }
 .hand-hole-cake-img {
+    z-index: -1;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100px;
     transition: width 1000ms;
+}
+@media screen and (max-width: 845px) {
+    .hand-hole-cake-img {
+        bottom: 1rem;
+    }
 }
 @media screen and (max-width: 414px) {
     .hand-hole-cake-img {
@@ -372,6 +399,7 @@ header {
         display: none;
     }
 }
+
 @media screen and (min-width: 546px) {
     .hand-hole-cake-img {
         width: 120px;
@@ -379,6 +407,9 @@ header {
 }
 
 /* -------- SECTION TWO: Product section -------- */
+.section-two {
+    background-color: var(--sec-two-bg-clr);
+}
 .s-two-upper-info {
     display: flex;
     justify-content: space-between;
