@@ -1,8 +1,5 @@
 
-@font-face {
-    font-family: 'Pompiere';
-    src: url("/assets/ffamily/Pompiere/Pompiere-Regular.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
 
 html {
     scroll-behavior: smooth;
